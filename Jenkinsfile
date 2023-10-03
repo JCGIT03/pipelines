@@ -35,15 +35,15 @@ pipeline {
       }
     }
   }
-    post {
-        always {
+    //post {
+     //   always {
             //
-        }
-        success {
+    //    }
+    //    success {
             //
-        }
-        failture {
+    //    }
+    //    failture {
             //
-        }
-    }
+    //    }
+    //}
 }
