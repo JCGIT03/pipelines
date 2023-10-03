@@ -19,7 +19,15 @@ pipeline {
       }
     }
   }
-}
-node {
-   //groovy script
+    post {
+        always {
+            //
+        }
+        success {
+            //
+        }
+        failture {
+            //
+        }
+    }
 }
