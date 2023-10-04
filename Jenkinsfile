@@ -14,6 +14,13 @@ pipeline {
        }
       }
     }
+    stage("build") {
+       steps {
+        script {
+          gv.buildApp()
+        }
+      }
+    }
     stage("test") {
         when {
             expression {
@@ -21,13 +28,16 @@ pipeline {
             }
         }
        steps {
-        echo 'testing the aplication...'
+        script {
+          gv.testapp()
+        }
       }
     }
     stage("deploy") {
        steps {
-        echo 'deploying the aplication...'
-        echo "deploying version ${params.VERSION}"
+        script {
+          gv.deployapp()
+        }
       }
     }
   }
